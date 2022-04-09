@@ -1,0 +1,17 @@
+I have created a folder name ImageDataSets in which I have downloaded and saved images of 10 categories and each category 
+I have 1000 PNG images of 32x32  pixels (e.g. categoryname_1000 to categoryname_1999 using Imagemagick.
+
+Categories Included are :
+1000 images of Truck 
+1000 images of Ship 
+1000 images of Cat
+1000 images of Dog
+1000 images of Frog
+1000 images of Automobile
+1000 images of Airplane
+1000 images of Horse
+1000 images of Deer
+1000 images of Bird
+
+
+Total 10000 images
