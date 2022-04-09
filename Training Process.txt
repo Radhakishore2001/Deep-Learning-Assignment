@@ -1,0 +1,29 @@
+Complete Process for Training Models after Data Collection
+
+
+Sampling Class
+You will start with the custom layer to provide the Gaussian noise input along with the mean (mu) and standard deviation (sigma) of the encoder's output. Recall the equation to combine these:
+
+where  = mean,  = standard deviation, and  = random sample
+
+
+Encoder Model
+
+feed the output from the above function to the Sampling layer you defined earlier. That will have the latent representations that can be fed to the decoder network later. Please complete the function below to build the encoder network with the Sampling layer.
+
+Decoder Layers
+This will expand the latent representations back to the original image dimensions. After training your VAE model, you can use this decoder model to generate new data by feeding random inputs.
+
+Kullback–Leibler Divergence
+Next, define the function to compute the Kullback–Leibler Divergence loss. This will be used to improve the generative capability of the model.
+
+Putting it all together
+Please define the whole VAE model. Remember to use model.add_loss() to add the KL reconstruction loss. This will be accessed and added to the loss later in the training loop.
+
+You can now start the training loop. You are asked to select the number of epochs and to complete the subection on updating the weights. The general steps are:
+
+feed a training batch to the VAE model
+compute the reconstruction loss (hint: use the mse_loss defined above instead of bce_loss in the ungraded lab, then multiply by the flattened dimensions of the image (i.e. 64 x 64 x 3)
+add the KLD regularization loss to the total loss (you can access the losses property of the vae model)
+get the gradients
+use the optimizer to update the weights
