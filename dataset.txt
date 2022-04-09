@@ -15,3 +15,5 @@ Categories Included are :
 
 
 Total 10000 images
+
+UNZIP ALL THE FOLDERS BEFORE RUNNING
